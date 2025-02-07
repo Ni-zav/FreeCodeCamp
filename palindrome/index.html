@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2a9d8f">
+    <link rel="stylesheet" href="styles.css">
+    <title>Palindrome Detective</title>
+</head>
+<body>
+    <main class="app-container">
+        <h1 class="app-title">Palindrome Detective 🔍</h1>
+        <section class="checker-box">
+            <label for="text-input" class="input-label">Got a word in mind? Let's check!</label>
+            <div class="input-group">
+                <input type="text" id="text-input" class="text-field" placeholder="Type here...">
+                <button id="check-btn" class="check-button">Detect</button>
+            </div>
+            <div id="result" class="result-display hidden"></div>
+        </section>
+        <section class="info-box">
+            <h2 class="info-title">What's a Palindrome?</h2>
+            <p class="info-text">
+                A <strong>palindrome</strong> is like a word mirror - it reads the same forwards and backwards! 
+                We'll ignore spaces, punctuation, and letter case when checking.
+            </p>
+            <p class="project-credit">Built with 💻 for FreeCodeCamp JavaScript Certification</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
