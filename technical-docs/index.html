@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Obsidian Documentation</header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Getting_Started" class="nav-link">Getting Started</a>
+        <a href="#Markdown_Basics" class="nav-link">Markdown Basics</a>
+        <a href="#Links_and_Backlinks" class="nav-link">Links and Backlinks</a>
+        <a href="#Plugins_and_Themes" class="nav-link">Plugins and Themes</a>
+        <a href="#Advanced_Features" class="nav-link">Advanced Features</a>
+        <a href="#Graph_View" class="nav-link">Graph View</a>
+        <a href="#Daily_Notes" class="nav-link">Daily Notes</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>Obsidian is a powerful knowledge base that works on top of a local folder of plain text Markdown files.</p>
+            <p>Key features that make Obsidian unique:</p>
+            <ul>
+                <li>Local-first and plain text</li>
+                <li>Link-based note organization</li>
+                <li>Extensible with plugins</li>
+            </ul>
+            <code>obsidian://open?vault=YourVaultName</code>
+        </section>
+
+        <section class="main-section" id="Getting_Started">
+            <header>Getting Started</header>
+            <p>To begin with Obsidian, first download and install the application.</p>
+            <p>Create your first vault by following these steps:</p>
+            <code>1. Click "Create new vault"
+2. Choose a name and location
+3. Select "Create"</code>
+            <p>Basic concepts to understand:</p>
+            <ul>
+                <li>Vaults are folders on your computer</li>
+                <li>Notes are markdown files</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Markdown_Basics">
+            <header>Markdown Basics</header>
+            <p>Obsidian uses Markdown for formatting.</p>
+            <p>Here are some basic syntax examples:</p>
+            <code># Heading 1
+## Heading 2
+**bold**
+*italic*
+- bullet point</code>
+            <p>Advanced formatting options:</p>
+            <ul>
+                <li>Tables</li>
+                <li>Code blocks</li>
+                <li>Blockquotes</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Links_and_Backlinks">
+            <header>Links and Backlinks</header>
+            <p>Links are a core feature of Obsidian.</p>
+            <p>Creating links between notes:</p>
+            <code>[[Note Name]]
+[[Note Name|Alias]]</code>
+            <p>Backlinks appear in the right sidebar by default.</p>
+            <ul>
+                <li>Internal links</li>
+                <li>External links</li>
+                <li>Embedded notes</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Plugins_and_Themes">
+            <header>Plugins and Themes</header>
+            <p>Obsidian can be customized with plugins and themes.</p>
+            <p>Types of plugins available:</p>
+            <ul>
+                <li>Core plugins</li>
+                <li>Community plugins</li>
+            </ul>
+            <code>Settings → Community plugins → Browse</code>
+            <p>Theme customization:</p>
+            <p>You can modify the appearance using CSS snippets.</p>
+        </section>
+
+        <section class="main-section" id="Advanced_Features">
+            <header>Advanced Features</header>
+            <p>Obsidian offers several advanced features that enhance your note-taking experience.</p>
+            <p>Some of the most powerful features include:</p>
+            <ul>
+                <li>Command palette for quick actions</li>
+                <li>Custom hotkeys</li>
+                <li>Workspace layouts</li>
+                <li>Note templates</li>
+            </ul>
+            <p>Using the command palette:</p>
+            <code>Press Ctrl/Cmd + P to open
+Type your command
+Press Enter to execute</code>
+            <p>Templates are particularly useful for standardizing your notes:</p>
+            <code>---
+date: {{date}}
+tags: 
+---
+# {{title}}</code>
+        </section>
+
+        <section class="main-section" id="Graph_View">
+            <header>Graph View</header>
+            <p>The Graph View is one of Obsidian's most distinctive features.</p>
+            <p>It provides a visual representation of your notes and their connections.</p>
+            <ul>
+                <li>Local graph shows connections to current note</li>
+                <li>Global graph shows all vault connections</li>
+                <li>Customizable filters and groups</li>
+            </ul>
+            <p>Graph view shortcuts:</p>
+            <code>Ctrl/Cmd + G : Open graph view
+Click and drag to navigate
+Scroll to zoom in/out</code>
+            <p>You can customize the graph appearance in settings:</p>
+            <code>Settings → Appearance → Graph View
+- Node size
+- Link thickness
+- Color schemes</code>
+        </section>
+
+        <section class="main-section" id="Daily_Notes">
+            <header>Daily Notes</header>
+            <p>Daily notes help maintain a consistent journaling practice.</p>
+            <p>Setting up daily notes workflow:</p>
+            <ul>
+                <li>Enable the Daily Notes core plugin</li>
+                <li>Configure template and location</li>
+                <li>Use hotkeys for quick access</li>
+            </ul>
+            <p>Creating daily notes automatically:</p>
+            <code>1. Go to Settings
+2. Enable Daily Notes plugin
+3. Set template location
+4. Configure format</code>
+            <p>You can also link to daily notes using special syntax:</p>
+            <code>[[{{date:YYYY-MM-DD}}]]
+[[{{date-7d:YYYY-MM-DD}}]] # Last week</code>
+        </section>
+    </main>
+    <script>
+        // Add active class to nav links based on scroll position
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.main-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

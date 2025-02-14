@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimikri Bakery & Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Nimikri Bakery - Home-based bakery in Yogyakarta, Indonesia">
+</head>
+<body>
+    <header id="header">
+<!-- In index.html, replace the svg element with: -->
+<img id="header-img" class="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="FreeCodeCamp Logo">
+        <nav id="nav-bar">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#products" class="nav-link">Our Products</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome to Nimikri Bakery</h1>
+        <p>Experience the authentic taste of homemade Indonesian pastries, crafted with love in Yogyakarta</p>
+        <a href="#products" class="cta-button">Explore Our Products</a>
+    </section>
+
+    <section id="features">
+        <h2>Our Specialties</h2>
+        <div class="features-container">
+            <div class="feature">
+                <i class="fas fa-cookie-bite"></i>
+                <h3>Preservative-Free</h3>
+                <p>All products made fresh without any preservatives</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-heart"></i>
+                <h3>Family Recipe</h3>
+                <p>Named after our children: Nikmah, Hilmi, and Fikri</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-leaf"></i>
+                <h3>Health Conscious</h3>
+                <p>Using cassava sugar and mocaf flour alternatives</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Our Signature Products</h2>
+        <div class="products-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="bakpia-image.jpg" alt="Bakpia Kukus Menul" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Bakpia Kukus Menul</h3>
+                    <p>Soft, steamed traditional pastry with sweet filling</p>
+                    <span class="product-tag">Best Seller</span>
+                </div>
+            </div>
+            <!-- Add more product cards -->
+        </div>
+    </section>
+
+    <section id="video-section">
+        <iframe id="video"
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/example"
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <section id="pricing">
+        <div class="pricing-container">
+            <div class="price-box">
+                <h3>Bakpia Package</h3>
+                <p class="price">Rp 50.000</p>
+                <ul>
+                    <li>10 pcs Bakpia Kukus</li>
+                    <li>Free delivery in Yogyakarta</li>
+                    <li>Custom packaging available</li>
+                </ul>
+            </div>
+            <!-- Add more pricing boxes -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <h2>Join Our Newsletter</h2>
+                <p>Get updates on new products and special offers</p>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" 
+                           placeholder="Enter your email address" required>
+                    <input type="submit" id="submit" value="Subscribe">
+                </div>
+            </form>
+            <div class="social-links">
+                <a href="https://www.instagram.com/nimikri_bakery/" 
+                   target="_blank" 
+                   aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 087738099811 | 08995124193</p>
+                    <p><i class="fas fa-envelope"></i> umuhilmi@yahoo.co.id</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nimikri Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nizav | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background glow effect -->
+                <defs>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="1" result="blur"/>
+                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                    </filter>
+                </defs>
+
+                <!-- Letter N - Geometric style -->
+                <path d="M15 30V10l20 20V10" 
+                      stroke="currentColor" 
+                      stroke-width="4" 
+                      fill="none" 
+                      stroke-linecap="round"/>
+
+                <!-- Letter I - Minimalist -->
+                <path d="M45 10v20" 
+                      stroke="currentColor" 
+                      stroke-width="4" 
+                      stroke-linecap="round"/>
+
+                <!-- Letter Z - Sharp angles -->
+                <path d="M55 10h15L55 30h15" 
+                      stroke="currentColor" 
+                      stroke-width="4" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round"/>
+
+                <!-- Letter A - Angular design -->
+                <path d="M80 30L90 10l10 20M83 22h14" 
+                      stroke="currentColor" 
+                      stroke-width="4" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round"/>
+
+                <!-- Letter V - Sharp design -->
+                <path d="M105 10l7.5 20l7.5-20" 
+                      stroke="currentColor" 
+                      stroke-width="4" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="nav-links">
+            <a href="#welcome-section">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#profile-link" target="https://www.freecodecamp.org/Nizav">Profile</a>
+        </div>
+    </nav>
+
+    <section id="welcome-section">
+        <h1>Hi, I'm Nizav</h1>
+        <p class="subtitle">A Student and Developer</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <a href="#" class="project-tile">
+                <article>
+                    <img src="https://picsum.photos/500/300" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Project One</h3>
+                        <p>A sample project description</p>
+                    </div>
+                </article>
+            </a>
+            <a href="#" class="project-tile">
+                <article>
+                    <img src="https://picsum.photos/501/300" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Project Two</h3>
+                        <p>Another project description</p>
+                    </div>
+                </article>
+            </a>
+            <a href="#" class="project-tile">
+                <article>
+                    <img src="https://picsum.photos/502/300" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Project Three</h3>
+                        <p>Yet another project description</p>
+                    </div>
+                </article>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <a id="profile-link" href="https://github.com/yourusername" target="_blank">
+            View My GitHub
+        </a>
+    </footer>
+</body>
+</html>
