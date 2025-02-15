@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="main-title">Pokédex</h1>
+    <div class="container">
+        <div class="left-panel">
+            <div class="decorative-lights">
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+            </div>
+            
+            <div class="pokemon-image">
+                <img id="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pokemon">
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" required placeholder="Enter Pokemon name or ID">
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+        
+        <div class="hinge"></div>
+        
+        <div class="right-panel">
+            <div class="pokemon-card">
+                <div class="pokemon-info">
+                    <h2 id="pokemon-name">POKEMON NAME</h2>
+                    <p id="pokemon-id">#00</p>
+                    <div id="types" class="types"></div>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-group">
+                        <p>Weight: <span id="weight">0</span></p>
+                        <p>Height: <span id="height">0</span></p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <span class="stat-label">HP</span>
+                            <span id="hp">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Attack</span>
+                            <span id="attack">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Defense</span>
+                            <span id="defense">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Sp. Attack</span>
+                            <span id="special-attack">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Sp. Defense</span>
+                            <span id="special-defense">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Speed</span>
+                            <span id="speed">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
