@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>25 + 5 Clock</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="clock-container">
+    <div class="clock">
+      <h1><i class="fas fa-clock"></i> 25 + 5 Clock</h1>
+      
+      <div class="length-controls">
+        <div class="break-controls">
+          <div id="break-label">Break Length</div>
+          <div class="controls">
+            <button id="break-decrement"><i class="fas fa-minus"></i></button>
+            <span id="break-length">5</span>
+            <button id="break-increment"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="session-controls">
+          <div id="session-label">Session Length</div>
+          <div class="controls">
+            <button id="session-decrement"><i class="fas fa-minus"></i></button>
+            <span id="session-length">25</span>
+            <button id="session-increment"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="timer">
+        <div id="timer-label">Session</div>
+        <div id="time-left">25:00</div>
+        <div class="timer-controls">
+          <button id="start_stop">
+            <i class="fas fa-play"></i>
+            <i class="fas fa-pause"></i>
+          </button>
+          <button id="reset">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by <a href="https://github.com/ni-zav" target="_blank">Nizav</a> | FreeCodeCamp Project</p>
+  </footer>
+
+  <audio id="beep" src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

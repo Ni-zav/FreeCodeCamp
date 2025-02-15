@@ -1,0 +1,245 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #e0e0e0;
+  font-family: 'Calculator', 'Digital-7', monospace;
+  flex-direction: column;
+}
+
+.calculator-container {
+  transform: rotate3d(3, 1, 0, 35deg) rotate3d(0, 0, 1, -8deg);
+  perspective: 3000px;
+  margin: 4rem;
+  transform-style: preserve-3d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Add floating shadow */
+.calculator-container::before {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  width: 85%;
+  height: 40px;
+  transform: translateX(-50%) rotateX(60deg) scale(1, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.calculator {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 
+    inset 0 0 20px rgba(0,0,0,0.2),
+    30px 30px 40px rgba(0,0,0,0.4),
+    -5px -5px 20px rgba(255,255,255,0.1);
+  width: 300px;
+  border: 2px solid #000;
+  transform-style: flat;
+  position: relative;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+#display {
+  background: #c3d4c6;
+  color: #2b2b2b;
+  padding: 15px;
+  font-size: 1.8rem;
+  text-align: right;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  min-height: 50px;
+  word-wrap: break-word;
+  font-family: 'Digital-7', 'Calculator', monospace;
+  border: 1px solid #888;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  transform-style: flat;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+button {
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background: #e8e8e8;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 
+    0 3px 0 #999,
+    0 4px 5px rgba(0,0,0,0.2);
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  transform-style: flat;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-font-smoothing: antialiased;
+  outline: 1px solid transparent;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 
+    0 1px 0 #999,
+    0 2px 3px rgba(0,0,0,0.2);
+}
+
+/* Remove the webkit-specific media query */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  button {
+    transform: translateZ(0);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.span-vertical {
+  grid-row: span 2;
+  background: #4d7fff;
+  color: white;
+  box-shadow: 
+    0 3px 0 #2b4999,
+    0 4px 5px rgba(0,0,0,0.2);
+}
+
+.operator {
+  background: #f0f0f0;
+  color: #e67700;
+}
+
+#clear {
+  background: #ff6b6b;
+  color: white;
+  box-shadow: 
+    0 3px 0 #cc5555,
+    0 4px 5px rgba(0,0,0,0.2);
+}
+
+#equals {
+  background: #4caf50;
+}
+
+#equals:hover {
+  background: #388e3c;
+}
+
+/* Add Casio-style branding */
+.calculator::before {
+  content: 'CASIO';
+  position: absolute;
+  top: -25px;
+  left: 15px;
+  font-size: 1.2rem;
+  color: #666;
+  letter-spacing: 2px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  transform: translateZ(25px) translateY(-5px);
+}
+
+/* Add side panels for 3D effect */
+.calculator::after {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 100%;
+  background: #0f0f0f;
+  right: -35px;
+  top: 0;
+  transform: rotateY(-110deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  outline: 1px solid transparent;
+}
+
+.calculator .bottom-edge {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  background: #0f0f0f;
+  bottom: -35px;
+  left: 0;
+  transform: rotateX(-110deg);
+  transform-origin: top;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  outline: 1px solid transparent;
+}
+
+/* Solar panel effect */
+.calculator::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  width: 80px;
+  height: 15px;
+  background: linear-gradient(90deg, 
+    #2b2b2b 0%,
+    #4a4a4a 20%,
+    #2b2b2b 40%,
+    #4a4a4a 60%,
+    #2b2b2b 80%,
+    #4a4a4a 100%
+  );
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #4d7fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #2b4999;
+}
